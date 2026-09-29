@@ -1,62 +1,105 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>KirayaDiary - Privacy Policy</title>
-    <style>
-        body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; max-width: 800px; margin: 0 auto; padding: 20px; line-height: 1.6; color: #333; }
-        h1 { color: #6750A4; }
-        h2 { color: #4a3780; margin-top: 24px; }
-        .updated { color: #666; font-size: 14px; }
-    </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Trakora · Privacy Policy</title>
+  <style>
+    :root { --paper:#F4F2EC; --card:#FFFFFF; --ink:#17191E; --muted:#5A6170; --line:#E2DED3; --green:#0E6B57; --tint:#D8ECE5; }
+    @media (prefers-color-scheme: dark) { :root { --paper:#121418; --card:#1B1E23; --ink:#ECEDEF; --muted:#A3A9B4; --line:#2E323A; --green:#6FD3B4; --tint:#1F3A33; } }
+    * { box-sizing: border-box; }
+    body { margin:0; background:var(--paper); color:var(--ink); font:16px/1.65 system-ui,-apple-system,"Segoe UI",Roboto,sans-serif; }
+    main { max-width: 760px; margin: 0 auto; padding: 40px 20px 64px; }
+    .brand { display:flex; align-items:center; gap:12px; margin-bottom:28px; }
+    .mark { width:44px; height:44px; border-radius:14px; background:var(--green); display:grid; place-items:center; color:#fff; font-weight:800; }
+    h1 { font-size: 34px; line-height:1.1; letter-spacing:-0.02em; margin: 0 0 6px; }
+    h2 { font-size: 20px; margin: 36px 0 8px; }
+    h3 { font-size: 16px; margin: 20px 0 4px; }
+    p, li { color: var(--ink); }
+    .muted { color: var(--muted); }
+    .card { background:var(--card); border:1px solid var(--line); border-radius:18px; padding:18px 20px; margin: 16px 0; }
+    .tldr { background:var(--tint); border-color:transparent; }
+    ul { padding-left: 20px; }
+    li { margin: 4px 0; }
+    table { width:100%; border-collapse: collapse; font-size: 15px; }
+    th, td { text-align:left; vertical-align:top; padding:10px 8px; border-bottom:1px solid var(--line); }
+    th { color: var(--muted); font-weight:600; }
+    a { color: var(--green); }
+  </style>
 </head>
 <body>
-    <h1>Privacy Policy for KirayaDiary</h1>
-    <p class="updated">Last updated: March 26, 2026</p>
+<main>
+  <div class="brand"><div class="mark">T</div><strong>Trakora</strong></div>
+  <h1>Privacy Policy</h1>
+  <p class="muted">Last updated: 30 September 2026</p>
 
-    <h2>Introduction</h2>
-    <p>KirayaDiary ("we", "our", or "us") is committed to protecting your privacy. This Privacy Policy explains how we collect, use, and safeguard your information when you use our mobile application.</p>
+  <div class="card tldr">
+    <strong>In short:</strong> Trakora stores what you add (tasks, goals, rent, expenses and so on) so you and the people in your groups can see it. We don't sell your data or show ads. Features like fingerprint lock, reading copied text and (in one special version) reading bank SMS work <em>on your phone</em>; nothing is uploaded unless you choose to save it.
+  </div>
 
-    <h2>Information We Collect</h2>
-    <p>When you use KirayaDiary, we collect the following information:</p>
-    <ul>
-        <li><strong>Account Information:</strong> When you sign in with Google, we collect your name, email address, and profile photo URL.</li>
-        <li><strong>User-Generated Content:</strong> Tasks, reminders, tenant details, and rent records that you create within the app.</li>
-        <li><strong>Device Information:</strong> Firebase Cloud Messaging (FCM) tokens for push notifications.</li>
-    </ul>
+  <h2>1. Who we are</h2>
+  <p>Trakora ("we", "us") is an app for families and small groups to share tasks, goals, rent, expenses, maintenance, inventory and attendance. Contact: <a href="mailto:sharma.yash520@gmail.com">sharma.yash520@gmail.com</a>.</p>
 
-    <h2>How We Use Your Information</h2>
-    <ul>
-        <li>To provide and maintain the app functionality</li>
-        <li>To enable collaborative group features with family members</li>
-        <li>To send push notifications for task reminders and rent due dates</li>
-        <li>To sync your data across devices</li>
-    </ul>
+  <h2>2. What we collect and why</h2>
+  <table>
+    <tr><th>Data</th><th>Why</th><th>Who can see it</th></tr>
+    <tr><td><strong>Google account</strong>: name, email, profile photo</td><td>Sign-in, and showing your name to people in your groups</td><td>You and members of your groups</td></tr>
+    <tr><td><strong>Group content</strong>: tasks (with checklists, reminders and assignees), shared goals, comments, tenants (name, phone, email, room, rent, deposit, lease dates), rent payments, expenses, settlements, budgets, maintenance and warranty records, inventory, attendance</td><td>The core app features</td><td>Members of that group</td></tr>
+    <tr><td><strong>Private goals</strong></td><td>Personal goal tracking</td><td>Only you (enforced by our database rules)</td></tr>
+    <tr><td><strong>Group photo</strong> (optional)</td><td>A picture as the group's icon. It is shrunk to a small image and saved with the group.</td><td>Members of that group</td></tr>
+    <tr><td><strong>Activity log</strong>: who added, completed, paid or changed something, and when</td><td>The group's Activity feed</td><td>Members of that group. Private goals are never logged.</td></tr>
+    <tr><td><strong>Notification token</strong></td><td>Delivering reminders and app messages to your device</td><td>Not shown to anyone</td></tr>
+    <tr><td><strong>Crash reports</strong>: device model, Android version, app version and technical details of the crash</td><td>Finding and fixing bugs (Firebase Crashlytics)</td><td>Only the developer. They don't include your tasks, expenses or other content.</td></tr>
+    <tr><td><strong>App integrity check</strong></td><td>Confirming requests come from the genuine Trakora app, to prevent abuse (Firebase App Check with Google Play Integrity)</td><td>Not shown to anyone</td></tr>
+  </table>
 
-    <h2>Data Storage and Security</h2>
-    <p>Your data is stored securely in Google Firebase (Firestore) and is encrypted in transit using HTTPS/TLS. Only you and the members of your groups can access your shared data.</p>
+  <h2>3. Things that stay on your phone</h2>
+  <ul>
+    <li><strong>App lock.</strong> Fingerprint, face or PIN unlock uses your phone's own security. Trakora never receives or stores your biometric data.</li>
+    <li><strong>Reminders.</strong> Scheduled on your device from the tasks, rent and maintenance dates you've entered.</li>
+    <li><strong>Home-screen widget.</strong> A short summary of today's tasks is kept on your device for the widget.</li>
+    <li><strong>Settings.</strong> Preferences such as vibration, motion, language and app lock are stored only on your device.</li>
+    <li><strong>Camera.</strong> Used only when you choose to scan an invite QR code or take a group photo. Scanned images are not saved or uploaded.</li>
+  </ul>
 
-    <h2>Data Sharing</h2>
-    <p>We do not sell, trade, or share your personal information with third parties. Your data is only shared with members of the groups you create or join within the app.</p>
+  <h2>4. Adding expenses from payments</h2>
+  <ul>
+    <li><strong>Share to Trakora.</strong> If you share a message from another app into Trakora, we read that text to pre-fill an expense. Nothing is saved unless you save the expense.</li>
+    <li><strong>Copied payments.</strong> When you open "Add expense", Trakora checks your clipboard once, on your device, to offer a copied payment. The clipboard is not stored or uploaded; only an expense you save is.</li>
+    <li><strong>Bank statement import.</strong> A CSV statement you pick is read on your device. The file itself is never uploaded; only the transactions you select are saved as expenses.</li>
+    <li><strong>Bank SMS (optional; only in the version distributed outside Google Play).</strong> The Google Play version of Trakora does <em>not</em> request SMS access. In the separately distributed version, you can turn on "Auto-detect expenses from bank SMS". It is off by default. When on, the app reads SMS from banks and payment apps <em>on your phone</em> to find transactions, and shows them to you for review. Only transactions you confirm are saved as expenses. Message text is never uploaded, and you can turn the feature off and revoke the permission at any time.</li>
+  </ul>
 
-    <h2>Third-Party Services</h2>
-    <p>We use the following third-party services:</p>
-    <ul>
-        <li><strong>Google Firebase:</strong> For authentication, data storage, and push notifications</li>
-        <li><strong>Google Sign-In:</strong> For user authentication</li>
-    </ul>
+  <h2>5. Sharing</h2>
+  <p>We do not sell your data, share it with advertisers, or use it for advertising. Your content is visible only to members of the groups you create or join. When you share a rent receipt, report or invite, you choose where it goes (for example WhatsApp); that app's own privacy policy then applies.</p>
 
-    <h2>Account Deletion</h2>
-    <p>You can request account deletion directly from the app by going to Profile and tapping "Delete Account". Upon confirmation, your deletion request will be submitted and your account data will be permanently removed. You can also request deletion by emailing us at <a href="mailto:sharma.yash520@gmail.com">sharma.yash520@gmail.com</a>.</p>
+  <h2>6. Service providers</h2>
+  <ul>
+    <li><strong>Google Firebase</strong>: sign-in (Authentication), database (Cloud Firestore, stored in the asia-south1 region, Mumbai), crash reports (Crashlytics), app integrity (App Check), and notification delivery (Cloud Messaging).</li>
+    <li><strong>Google Sign-In</strong>: account sign-in.</li>
+  </ul>
 
-    <h2>Children's Privacy</h2>
-    <p>KirayaDiary is not intended for children under 13. We do not knowingly collect information from children under 13.</p>
+  <h2>7. Security</h2>
+  <p>Data is encrypted in transit (HTTPS/TLS) and at rest by Google Firebase. Database security rules limit each group's data to its members and private goals to their owner.</p>
 
-    <h2>Changes to This Policy</h2>
-    <p>We may update this Privacy Policy from time to time. We will notify you of any changes by posting the new policy on this page.</p>
+  <h2>8. Keeping and deleting your data</h2>
+  <p>We keep your data while your account is active. You can delete individual items at any time. To delete your account, go to <strong>Profile → Delete account</strong> in the app, or email us. We then remove your account and personal data. Content you added to a group that still has other members may remain visible to them, without your account details, unless you ask us to remove it. Crash reports are kept for up to 90 days.</p>
 
-    <h2>Contact Us</h2>
-    <p>If you have any questions about this Privacy Policy, please contact us at: <a href="mailto:sharma.yash520@gmail.com">sharma.yash520@gmail.com</a></p>
+  <h2>9. Children</h2>
+  <p>Trakora is not directed at children under 13, and we don't knowingly collect their data. If you believe a child has given us data, contact us and we'll delete it.</p>
+
+  <h2>10. Your choices</h2>
+  <ul>
+    <li>Turn notifications, app lock or SMS detection on and off in the app or in your phone's settings.</li>
+    <li>Leave a group, or delete items, goals or your account.</li>
+    <li>Ask us for a copy of your data, or to correct or delete it: <a href="mailto:sharma.yash520@gmail.com">sharma.yash520@gmail.com</a>.</li>
+  </ul>
+
+  <h2>11. Changes</h2>
+  <p>If we change this policy, we'll update this page and the date above. For significant changes we'll also tell you in the app.</p>
+
+  <h2>12. Contact</h2>
+  <p>Questions or requests: <a href="mailto:sharma.yash520@gmail.com">sharma.yash520@gmail.com</a></p>
+</main>
 </body>
 </html>
